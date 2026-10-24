@@ -47,9 +47,11 @@ a:hover { color: lighten($teal, 12%); }
 .split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
 .split-section h2 { margin-top: .25rem; }
 
-@media (min-width: 1280px) {
-  .page__inner-wrap {
-    max-width: 1400px;
+@media (min-width: 1024px) {
+  .wide .page {
+    float: none;
+    width: 100%;
+    padding-inline-end: 0;
   }
 }
 
