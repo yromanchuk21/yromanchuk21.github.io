@@ -23,7 +23,7 @@ a:hover { color: lighten($teal, 12%); }
 .page__content code { color: #9ee1d8; }
 .page__content pre { border: 1px solid $line; background: #11161a; }
 
-.terminal-hero { max-width: 850px; padding: 4.5rem 0 3rem; }
+.terminal-hero { max-width: 1080px; padding: 4.5rem 0 3rem; }
 .terminal-hero h1 { max-width: 720px; margin: .25rem 0 1rem; font-size: clamp(2.5rem, 7vw, 5.25rem); line-height: .98; }
 .eyebrow, .card-kicker { margin: 0 0 .5rem; color: $teal; font-size: .72rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
 .hero-copy { max-width: 650px; color: #b8c6c5; font-size: 1.18rem; }
@@ -46,6 +46,12 @@ a:hover { color: lighten($teal, 12%); }
 .card-link, .text-link { font-size: .82rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
 .split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
 .split-section h2 { margin-top: .25rem; }
+
+@media (min-width: 1280px) {
+  .page__inner-wrap {
+    max-width: 1400px;
+  }
+}
 
 @media (max-width: 800px) {
   .terminal-hero { padding-top: 2.8rem; }
