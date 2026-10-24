@@ -20,7 +20,8 @@ layout: default
 </section>
 
 <section id="notes" class="section section-tint">
-  <div class="container"><div class="section-heading"><p class="eyebrow">02 / Research journal</p><h2>Cybersecurity Notes / HTB Write-ups</h2></div>
+  <div class="container"><div class="section-heading"><p class="eyebrow">02 / 
+Research journal</p><h2>Lab Notebook: Notes and Writeups</h2></div>
     <div class="article-list">
       {% for post in site.posts limit: 4 %}
       <article><p class="meta">{{ post.date | date: "%b %-d, %Y" }} · {{ post.categories | join: " / " }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.excerpt | strip_html | truncate: 160 }}</p></article>
