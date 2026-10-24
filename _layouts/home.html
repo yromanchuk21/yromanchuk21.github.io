@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Portfolio / Field Notes</p>
+    <h1>Work, documented clearly.</h1>
+    <div class="hero-copy">{{ content | markdownify }}</div>
+    <a class="button" href="#projects">Browse projects <span aria-hidden="true">↓</span></a>
+  </div>
+</section>
+
+<section id="projects" class="section container" aria-labelledby="projects-heading">
+  <div class="section-heading"><p class="eyebrow">01 / Selected work</p><h2 id="projects-heading">Projects</h2></div>
+  <div class="card-grid">
+    {% for project in site.projects %}
+      {% include project-card.html item=project %}
+    {% endfor %}
+  </div>
+</section>
+
+<section id="notes" class="section section-tint">
+  <div class="container"><div class="section-heading"><p class="eyebrow">02 / Research journal</p><h2>Cybersecurity Notes / HTB Write-ups</h2></div>
+    <div class="article-list">
+      {% for post in site.posts limit: 4 %}
+      <article><p class="meta">{{ post.date | date: "%b %-d, %Y" }} · {{ post.categories | join: " / " }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.excerpt | strip_html | truncate: 160 }}</p></article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="scripts" class="section container" aria-labelledby="scripts-heading">
+  <div class="section-heading"><p class="eyebrow">03 / Tools</p><h2 id="scripts-heading">Scripts</h2></div>
+  <div class="card-grid compact">{% for item in site.scripts %}{% include project-card.html item=item %}{% endfor %}</div>
+</section>
+
+<section id="reversing" class="section section-tint">
+  <div class="container"><div class="section-heading"><p class="eyebrow">04 / Analysis</p><h2>Reverse Engineering</h2></div>
+  <div class="card-grid compact">{% for item in site.reversing %}{% include project-card.html item=item %}{% endfor %}</div>
+  </div>
+</section>

@@ -1,0 +1,4 @@
+---
+layout: default
+---
+<article class="article container narrow"><header class="article-header"><p class="eyebrow">{{ page.categories | join: " / " | default: "Field note" }}</p><h1>{{ page.title }}</h1><p class="meta">{{ page.date | date: "%B %-d, %Y" }}{% if page.reading_time %} · {{ page.reading_time }} min read{% endif %}</p>{% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}</header><div class="prose">{{ content }}</div></article>
