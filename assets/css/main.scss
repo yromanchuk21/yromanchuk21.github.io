@@ -31,7 +31,18 @@ a:hover { color: lighten($teal, 12%); }
 .btn { border-radius: 2px; font-size: .85rem; letter-spacing: .05em; text-transform: uppercase; }
 .btn--primary { background: $teal; color: #0d1617; }
 .btn--primary:hover { background: lighten($teal, 10%); color: #0d1617; }
-.btn--inverse { border-color: $line; color: $mist; }
+.btn--inverse,
+.btn--inverse:visited {
+  background: transparent;
+  border: 1px solid $line;
+  color: $mist;
+}
+
+.btn--inverse:hover {
+  background: $panel;
+  border-color: $teal;
+  color: $mist;
+}
 .example-notice { border-left: 2px solid $teal; color: #aab8b7; font-size: .88rem; padding-left: .75rem; }
 .portfolio-section { border-top: 1px solid $line; padding: 3.5rem 0; }
 .section-heading { display: block; }
