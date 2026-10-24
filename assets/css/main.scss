@@ -34,7 +34,7 @@ a:hover { color: lighten($teal, 12%); }
 .btn--inverse { border-color: $line; color: $mist; }
 .example-notice { border-left: 2px solid $teal; color: #aab8b7; font-size: .88rem; padding-left: .75rem; }
 .portfolio-section { border-top: 1px solid $line; padding: 3.5rem 0; }
-.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.section-heading { display: block; }
 .section-heading h2 { margin-top: 0; }
 .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
 .project-card { display: flex; min-height: 260px; flex-direction: column; border: 1px solid $line; background: linear-gradient(145deg, rgba(43,53,60,.74), rgba(25,31,36,.9)); padding: 1.4rem; transition: border-color .18s ease, transform .18s ease; }
@@ -48,7 +48,7 @@ a:hover { color: lighten($teal, 12%); }
 .split-section h2 { margin-top: .25rem; }
 
 @media (min-width: 1024px) {
-  .wide .page {
+  .wide .archive {
     float: none;
     width: 100%;
     padding-inline-end: 0;
